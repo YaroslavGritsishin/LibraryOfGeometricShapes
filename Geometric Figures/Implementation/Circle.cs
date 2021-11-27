@@ -5,19 +5,30 @@ using System.Text;
 
 namespace Geometric_Figures.Implementation
 {
-    public class Circle : Figure
+    public class Circle : ICircle
     {
         /// <summary>
         /// Значение радиуса круга
         /// </summary>
-        public double Radius { get; set; } = 0;
+        private double Radius { get; set; } = 0;
         /// <summary>
-        /// Расчёт площади круга, площадь круга зависит от его радиуса, значение радиуса по умолканию 0 
+        /// Расчитывает площадь круга, площадь круга зависит от его радиуса, значение радиуса по умолканию 0 
         /// </summary>
         /// <returns></returns>
-        public override double Area()
+        public double Area()
         {
             return Math.PI * Math.Pow(Radius, 2);
+        }
+        /// <summary>
+        /// Устанавливает значение радиуса
+        /// </summary>
+        /// <param name="value"></param>
+        /// <exception cref="ArgumentException"></exception>
+        public void SetRadius(double value)
+        {
+            if(value < 0)
+                throw new ArgumentException(nameof(value), "Значение радиуса не может быть отрицательным");
+            this.Radius = value;
         }
     }
 }

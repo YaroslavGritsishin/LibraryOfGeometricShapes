@@ -6,33 +6,66 @@ using System.Text;
 
 namespace Geometric_Figures.Implementation
 {
-    public class Triangle : Figure
+    public class Triangle : ITriangle
     {
         /// <summary>
         /// Значение стороны А
         /// </summary>
-        public double SideA { get; set; } = 0;
+        private double SideA { get; set; } = 0;
         /// <summary>
         /// Значение стороны B
         /// </summary>
-        public double SideB { get; set; } = 0;
+        private double SideB { get; set; } = 0;
         /// <summary>
         /// Значение стороны С
         /// </summary>
-        public double SideC { get; set; } = 0;
+        private double SideC { get; set; } = 0;
         /// <summary>
-        /// Расчет площади треугольника по трем сторонам, по умолкчанию все стороны равны 0
+        /// Расчетывает площадь треугольника по трем сторонам, по умолчанию все стороны равны 0
         /// </summary>
         /// <returns></returns>
-        public override double Area()
+        public double Area()
         {
-            var triangleParties = new List<double>() 
+            var triangleParties = new List<double>()
             {
                 SideA, SideB, SideC
             };
             double semiPerimeter = triangleParties.Sum() / 2;
             return Math.Sqrt(triangleParties.Select(sideValue => semiPerimeter - sideValue)
                  .Aggregate(semiPerimeter, (accamulate, sourceItem) => sourceItem * accamulate));
+        }
+        /// <summary>
+        /// Устанавливает значение стороны А 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <exception cref="ArgumentException"></exception>
+        public void SetSideA(double value)
+        {
+            if (value < 0)
+                throw new ArgumentException(nameof(SideA), "Значение стороны треугольника не может быть отрицательным");
+            this.SideA = value;
+        }
+        /// <summary>
+        /// Устанавливает значение стороны B
+        /// </summary>
+        /// <param name="value"></param>
+        /// <exception cref="ArgumentException"></exception>
+        public void SetSideB(double value)
+        {
+            if (value < 0)
+                throw new ArgumentException(nameof(SideB), "Значение стороны треугольника не может быть отрицательным");
+            this.SideB = value;
+        }
+        /// <summary>
+        /// Устанавливает значение стороны C
+        /// </summary>
+        /// <param name="value"></param>
+        /// <exception cref="ArgumentException"></exception>
+        public void SetSideC(double value)
+        {
+            if (value < 0)
+                throw new ArgumentException(nameof(SideC), "Значение стороны треугольника не может быть отрицательным");
+            this.SideC = value;
         }
     }
 }

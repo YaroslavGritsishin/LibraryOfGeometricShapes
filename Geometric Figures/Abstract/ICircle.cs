@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Geometric_Figures.Abstract
 {
-    public abstract class Figure
+    public interface ICircle: IFigure
     {
-        public abstract double Area();
+        void SetRadius(double value);
     }
 }
