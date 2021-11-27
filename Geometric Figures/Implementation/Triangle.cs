@@ -42,7 +42,7 @@ namespace Geometric_Figures.Implementation
         public void SetSideA(double value)
         {
             if (value < 0)
-                throw new ArgumentException(nameof(SideA), "Значение стороны треугольника не может быть отрицательным");
+                throw new ArgumentException(nameof(value), "Значение стороны треугольника не может быть отрицательным");
             this.SideA = value;
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Geometric_Figures.Implementation
         public void SetSideB(double value)
         {
             if (value < 0)
-                throw new ArgumentException(nameof(SideB), "Значение стороны треугольника не может быть отрицательным");
+                throw new ArgumentException(nameof(value), "Значение стороны треугольника не может быть отрицательным");
             this.SideB = value;
         }
         /// <summary>
@@ -64,7 +64,7 @@ namespace Geometric_Figures.Implementation
         public void SetSideC(double value)
         {
             if (value < 0)
-                throw new ArgumentException(nameof(SideC), "Значение стороны треугольника не может быть отрицательным");
+                throw new ArgumentException(nameof(value), "Значение стороны треугольника не может быть отрицательным");
             this.SideC = value;
         }
     }
