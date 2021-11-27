@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryOfGeometricShapes</name>
+    </assembly>
+    <members>
+        <member name="T:Geometric_Figures.GeometricFigures">
+            <summary>
+            Геометрические фигуры
+            </summary>
+        </member>
+        <member name="P:Geometric_Figures.GeometricFigures.Circle">
+            <summary>
+            Круг
+            </summary>
+        </member>
+        <member name="P:Geometric_Figures.GeometricFigures.Triangle">
+            <summary>
+            Треугольник
+            </summary>
+        </member>
+        <member name="P:Geometric_Figures.Implementation.Circle.Radius">
+            <summary>
+            Значение радиуса круга
+            </summary>
+        </member>
+        <member name="M:Geometric_Figures.Implementation.Circle.Area">
+            <summary>
+            Расчёт площади круга, площадь круга зависит от его радиуса, значение радиуса по умолканию 0 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Geometric_Figures.Implementation.Triangle.SideA">
+            <summary>
+            Сторона А
+            </summary>
+        </member>
+        <member name="P:Geometric_Figures.Implementation.Triangle.SideB">
+            <summary>
+            Сторона B
+            </summary>
+        </member>
+        <member name="P:Geometric_Figures.Implementation.Triangle.SideC">
+            <summary>
+            Сторона С
+            </summary>
+        </member>
+        <member name="M:Geometric_Figures.Implementation.Triangle.Area">
+            <summary>
+            Расчет площади треугольника по трем сторонам, по умолкчанию все стороны равны 0
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Geometric_Figures</RootNamespace>
+    <Authors>Gritsishin Yaroslav</Authors>
+    <Company>MindBox</Company>
+    <Product>Library</Product>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\VisualStudioProject\Geometric Figures\Geometric Figures\Geometric Figures.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
